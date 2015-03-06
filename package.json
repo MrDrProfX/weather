@@ -1,0 +1,18 @@
+{
+    "author": "Jameson Saunders",
+    "name": "weather-jami",
+    "version": "0.1.1",
+    "description": "hosts a simple weather page",
+    "main": "server",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/MrDrProfX/weather.git"
+    },
+    "keywords": ["utah", "weather"],
+    "dependencies": {},
+    "engines":
+    {
+        "node": "*"
+    }
+}
