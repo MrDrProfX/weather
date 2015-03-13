@@ -17,3 +17,65 @@ GET comments route
 removed 1 documents
 Document Array: 
 []
+static file route
+comment route
+POST comment route
+{ Name: 'jami', Comment: 'awesome' }
+Name: jami
+Comment: awesome
+Record added as 550276e0258f10420f614eff
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'jami',
+    Comment: 'awesome',
+    _id: 550276e0258f10420f614eff } ]
+comment route
+POST comment route
+{ Name: '', Comment: '' }
+Name: 
+Comment: 
+Record added as 550276f0258f10420f614f00
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'jami',
+    Comment: 'awesome',
+    _id: 550276e0258f10420f614eff },
+  { Name: '', Comment: '', _id: 550276f0258f10420f614f00 } ]
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'jami',
+    Comment: 'awesome',
+    _id: 550276e0258f10420f614eff },
+  { Name: '', Comment: '', _id: 550276f0258f10420f614f00 } ]
+comment route
+POST comment route
+{ Name: 'eg', Comment: 'sfdg' }
+Name: eg
+Comment: sfdg
+Record added as 550276f5258f10420f614f01
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'jami',
+    Comment: 'awesome',
+    _id: 550276e0258f10420f614eff },
+  { Name: '', Comment: '', _id: 550276f0258f10420f614f00 },
+  { Name: 'eg', Comment: 'sfdg', _id: 550276f5258f10420f614f01 } ]
+comment route
+GET comments route
+removed 3 documents
+Document Array: 
+[]
+comment route
+POST comment route
+{ Name: 'eg', Comment: 'sfdg' }
+Name: eg
+Comment: sfdg
+Record added as 550276fa258f10420f614f02
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'eg', Comment: 'sfdg', _id: 550276fa258f10420f614f02 } ]
