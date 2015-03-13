@@ -13,6 +13,8 @@ Name
 
 <img src="/icons/unknown.gif" alt="[   ]"> <a href="index.php">
 index.php</a><br />
+<img src="/icons/unknown.gif" alt="[   ]"> <a href="weather.html">
+weather.html</a><br />
 <img src="/icons/unknown.gif" alt="[   ]"> <a href="test1.html">
 test1.html</a><br />
 <img src="/icons/unknown.gif" alt="[   ]"> <a href="test2.txt">

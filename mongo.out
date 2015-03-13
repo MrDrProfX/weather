@@ -1,0 +1,6 @@
+nohup: ignoring input
+about to fork child process, waiting until server is ready for connections.
+forked process: 3151
+all output going to: /var/log/mongodb.log
+log file [/var/log/mongodb.log] exists; copied to temporary file [/var/log/mongodb.log.2015-03-13T04-26-34]
+child process started successfully, parent exiting

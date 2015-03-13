@@ -22,7 +22,77 @@
         
         <div id="weather"> No Weather </div>
 
+        <hr>
+
+        <!-- COMMENTS -->
+
+        <form id="commentForm" action="">
+            Name: <input type="text" id="Name" value="jami"><br>
+            Comment: <input type="text" id="Comment" value="awesome"><br>
+        </form>
+        
+        <button id="submitComment" type="button">Submit Comment</button>
+        <button id="showComments" type="button">Show Comments</button>
+        <button id="clearComments" type="button">Clear Comments</button>
+
+        <div id="json">json</div>
+        <div id="done">return</div><br>
+        <p>Current Comments</p>
+        <div id="currentComments"><div>
+
         <script> 
+
+$("#clearComments").click(function(f)
+{
+    console.log("clearing comments");
+
+    var url = "http://jami.space/comment/clear";
+    $.getJSON(url, function(data)
+    {
+        var everything;
+        everything = "<ul>";
+        $.each(data, function(i, item)
+        {
+            everything += "<li> Name: "+data[i].Name+" Comment: "+data[i].Comment;
+        });
+        everything += "</ul>";
+        $("#currentComments").html(everything);
+    });
+});
+
+$("#submitComment").click(function(f)
+{
+    console.log("submitting comment");
+    var name = $("#Name").val();
+    var comment = $("#Comment").val();
+    var json = {"Name":name, "Comment":comment};
+    var jsonString = JSON.stringify(json);
+    $("#json").html(jsonString);
+
+    var url = "http://jami.space/comment";
+    $.post(url, jsonString, function(data, textStatus)
+    {
+        console.log(textStatus);
+        $("#done").html("SUCCESS!!!");
+    });
+});
+
+$("#showComments").click(function(f)
+{
+    console.log("showing comments");
+    var url = "http://jami.space/comment";
+    $.getJSON(url, function(data)
+    {
+        var everything;
+        everything = "<ul>";
+        $.each(data, function(i, item)
+        {
+            everything += "<li> Name: "+data[i].Name+" Comment: "+data[i].Comment;
+        });
+        everything += "</ul>";
+        $("#currentComments").html(everything);
+    })
+});
 
 $("#button").click(function(e) {
 

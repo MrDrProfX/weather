@@ -1,2 +1,19 @@
 nohup: ignoring input
-serving html/weather.html
+static file route
+comment route
+POST comment route
+{ Name: 'jami', Comment: 'awesome' }
+Name: jami
+Comment: awesome
+Record added as 55027564258f10420f614efe
+comment route
+GET comments route
+Document Array: 
+[ { Name: 'jami',
+    Comment: 'awesome',
+    _id: 55027564258f10420f614efe } ]
+comment route
+GET comments route
+removed 1 documents
+Document Array: 
+[]
