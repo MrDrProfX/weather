@@ -46,7 +46,7 @@ $("#clearComments").click(function(f)
 {
     console.log("clearing comments");
 
-    var url = "http://jami.space/comment/clear";
+    var url = location.protocol+"//jami.space/comment/clear";
     $.getJSON(url, function(data)
     {
         var everything;
@@ -69,18 +69,25 @@ $("#submitComment").click(function(f)
     var jsonString = JSON.stringify(json);
     $("#json").html(jsonString);
 
-    var url = "http://jami.space/comment";
-    $.post(url, jsonString, function(data, textStatus)
-    {
-        console.log(textStatus);
-        $("#done").html("SUCCESS!!!");
+    var url = location.protocol+"//jami.space/comment";
+    jQuery.ajax
+    ({
+        url: url,
+        type: "POST",
+        data: jsonString,
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function()
+        {
+            $("#done").append("Success");
+        }
     });
 });
 
 $("#showComments").click(function(f)
 {
     console.log("showing comments");
-    var url = "http://jami.space/comment";
+    var url = location.protocol+"//jami.space/comment";
     $.getJSON(url, function(data)
     {
         var everything;
@@ -129,8 +136,9 @@ $("#button").click(function(e) {
 $("#cityfield").keyup(function ()
 {
     //var url = "https://students.cs.byu.edu/~clement/CS360/ajax/getcity.cgi?q=";
-    var url = "jami.space/getcity?q=";
+    var url = location.protocol+"//jami.space/getcity?q=";
     url += $("#cityfield").val();
+    console.log('sending request: ' + url);
     $.getJSON(url,function(success) {
             var everything = "<ul>";
             $.each(success, function(i,item) {
