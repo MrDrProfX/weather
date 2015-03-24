@@ -21,8 +21,11 @@ var options =
     cert: fs.readFileSync('ssl/server.crt')
 };
 
-http.createServer(app).listen(80);
+var port = process.argv[2]
+
+http.createServer(app).listen(port);
 https.createServer(options, app).listen(443);
+console.log('the server is now running on ports: ' + port + ' and ' + 443)
 
 app.get('/', function (req, res)
 {

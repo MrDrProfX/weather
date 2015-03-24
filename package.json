@@ -1,7 +1,7 @@
 {
     "author": "Jameson Saunders",
     "name": "weather-jami",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "weather-jami contains a simple utah weather oriented web server",
     "main": "server",
     "repository":
